@@ -4,7 +4,7 @@ This repository contains Cypress test scripts to automate the testing of the log
 
  **Test Description**
 
-The test script (`sauce_demo_login.spec.js`) includes two test cases:
+The test script includes two test cases:
 
 **Login with Valid Credentials**:
 Tests the login functionality with valid credentials.
