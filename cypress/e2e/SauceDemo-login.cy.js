@@ -15,9 +15,11 @@ describe('SauceDemo Login Page', () => {
       //click the login button
       cy.get('[data-test="login-button"]').click();
 
+      //Assert that the user is redirected to the inventory page after successful login
+      cy.url().should('include', '/inventory.html');
       
-    
-    });
+    }); 
+
 
 });
   
