@@ -17,6 +17,22 @@ describe('SauceDemo Login Page', () => {
 
       //Assert that the user is redirected to the inventory page after successful login
       cy.url().should('include', '/inventory.html');
+
+      //test for invalid credentials
+    it('should display an error with invalid credentials', () =>{
+      //visit the saucedemo login page
+      cy.visit('https://www.saucedemo.com/');
+
+
+      //enter invalid username and password
+      cy.get('[data-test="username"]').type('invalid_user');
+      cy.get('[data-test="password"]').type('invalid_password');
+
+
+      cy.get('[data-test="login-button"]').click();
+
+    
+    });
       
     }); 
 
