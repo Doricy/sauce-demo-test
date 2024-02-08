@@ -30,6 +30,13 @@ describe('SauceDemo Login Page', () => {
 
 
       cy.get('[data-test="login-button"]').click();
+      
+      // Assert that an error message is displayed
+      cy.get('.error-message-container')
+      .should('be.visible')
+      .and('contain.text', 'Username and password do not match any user in this service');
+
+     
 
     
     });
